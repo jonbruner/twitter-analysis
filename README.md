@@ -3,7 +3,7 @@ In 2013, I wrote an article called ["Tweets Loud and Quiet"](https://www.oreilly
 
 In order to write that article, I scraped metadata for about 400,000 Twitter accounts. Since then, it's been cited in [a handful of scholarly papers](https://scholar.google.com/scholar?oi=bibs&hl=en&cites=509207419917937138&as_sdt=5), and I've gotten regular requests from researchers for access to my original dataset. I'm pleased to share my full dataset here.
 
-This dataset was created between September 17, 2013, and October 19, 2013. Since I built it, Twitter has changed the way it assigns IDs, and a repeat of this project is now impossible (SEE BELOW SECTION LINK). Although this data might no longer provide a useful means of evaluating Twitter usage patterns, it's still interesting as a way to understand social dynamics.
+This dataset was created between September 17, 2013, and October 19, 2013. Since I built it, Twitter has changed the way it assigns IDs, and a repeat of this project is now impossible (see below for why). Although this data is no longer a contemporary snapshot of Twitter usage patterns, it's still interesting as a way to understand social dynamics.
 
 ## Background and collection
 Until roughly 2015, Twitter gave every account a unique ID from a reasonably compact namespace. When I compiled this data in 2013, existing accounts had unique ID numbers that fell between roughly 0 and 1.9 billion.
