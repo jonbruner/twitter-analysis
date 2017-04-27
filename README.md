@@ -1,5 +1,5 @@
 # Twitter User Sample
-In 2013, I wrote an article called ["Tweets Loud and Quiet"](https://www.oreilly.com/ideas/tweets-loud-and-quiet) in which I argued that, although Twitter is sometimes characterized as a powerfully egalitarian, democratizing force, it actually resembles a traditional broadcast medium, with a handful of very influential celebrities on one side and many millions of people with just a couple of followers on the other.
+In 2013, I wrote an article called ["Tweets Loud and Quiet"](https://www.oreilly.com/ideas/tweets-loud-and-quiet) in which I argued that, although Twitter is sometimes characterized as a powerfully egalitarian, democratizing force, it actually resembles a traditional broadcast medium with a handful of very influential celebrities on one side and many millions of people with just a couple of followers on the other.
 
 In order to write that article, I scraped metadata for about 400,000 Twitter accounts. Since then, it's been cited in [a handful of scholarly papers](https://scholar.google.com/scholar?oi=bibs&hl=en&cites=509207419917937138&as_sdt=5), and I've gotten regular requests from researchers for access to my original dataset. I'm pleased to share my full dataset here.
 
@@ -12,10 +12,10 @@ I generated this dataset by polling Twitter's API for random account IDs within 
 
 One other quirk: Twitter appears to have changed its account ID assignment algorithm around July 2012; before then, it assigned IDs at a density of 86%, and after then at 49%, skipping a large block of potential ID numbers in between.
 
-Around 2015, Twitter switched from its quasi-sequential ID assignment scheme to one that resembles [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier). Now that Twitter accounts are assigned a 64-bit ID generated in part by hashing a timestamp, the namespace you'd need to search in order to repeat this project is *2<sup>64</sup> = 1.8 x 10<sup>19</sup>*, or roughly as many possible IDs as there are <a href="https://en.wikipedia.org/wiki/Orders_of_magnitude_(numbers)#1018">insects on earth</a>. I try to avoid writing things like this, but here I'm sure enough that it'd exceed the most fundamental constraints of modern computing: it can't be done.
+Around 2015, Twitter switched from its quasi-sequential ID assignment scheme to one that resembles [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier). Now that Twitter accounts are assigned a 64-bit ID generated in part by hashing a timestamp, the namespace you'd need to search in order to repeat this project is *2<sup>64</sup> = 1.8 x 10<sup>19</sup>*, or roughly as many possible IDs as there are <a href="https://en.wikipedia.org/wiki/Orders_of_magnitude_(numbers)#1018">insects on earth</a>. I try to avoid writing things like this, but here I'm sure enough that it'd exceed some fundamental constraints of modern computing: it can't be done.
 
 ## Fields
-Here you'll find my Twitter sample as both a CSV file and an R dataset. The data in the files is identical.
+In this repo you'll find both a CSV file and an R dataset. They are identical.
 
 | Field | Remarks |
 | ----- | ------- |
@@ -29,7 +29,7 @@ Here you'll find my Twitter sample as both a CSV file and an R dataset. The data
 | account_created_at | Date and time of account creation |
 | account_created_at_interpolated | See below |
 | crawled_at | Date and time when account was scraped for inclusion in this dataset |
-| missing | 0: account is not missing<br>1: account never existed with this ID<br>2: account closed (by user, or by Twitter for abuse) |
+| missing | 0: account exists<br>1: account never existed with this ID<br>2: account closed (by user, or by Twitter for abuse) |
 | protected | 0: not protected<br>1: protected |
 | followers_count | Number of Twitter accounts following this account |
 | following_count | Number of Twitter accounts that this account follows |
